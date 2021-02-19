@@ -1,9 +1,13 @@
 import { graphql, PageProps } from "gatsby"
 import React, { FC } from "react"
+import { repository } from "../../../package.json"
 import Layout from "../../components/layout"
 
 export interface DataType {
   markdownRemark: {
+    fields: {
+      path: string
+    }
     frontmatter: {
       title: string
     }
@@ -19,6 +23,7 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
   const {
     data: {
       markdownRemark: {
+        fields: { path },
         frontmatter: { title },
         html,
       },
@@ -33,6 +38,17 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
       <main>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </main>
+      <footer>
+        <p>
+          <a
+            href={`${repository.url}/tree/master/${path}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Edit this page
+          </a>
+        </p>
+      </footer>
     </Layout>
   )
 }
@@ -40,6 +56,9 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        path
+      }
       frontmatter {
         title
       }

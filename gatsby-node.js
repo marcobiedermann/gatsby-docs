@@ -1,7 +1,7 @@
-const path = require("path")
+const { resolve, join } = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-const pageTemplate = path.resolve("./src/templates/Page/index.tsx")
+const pageTemplate = resolve("./src/templates/Page/index.tsx")
 
 async function createPages({ graphql, actions, reporter }) {
   const { createPage } = actions
@@ -47,11 +47,21 @@ async function createPages({ graphql, actions, reporter }) {
 }
 
 function onCreateNode({ node, actions, getNode }) {
-  const { createNodeField } = actions
   const { internal } = node
 
   if (internal.type === "MarkdownRemark") {
-    const value = createFilePath({
+    const { createNodeField } = actions
+    const { relativePath, sourceInstanceName } = getNode(node.parent)
+
+    const path = join(sourceInstanceName, relativePath)
+
+    createNodeField({
+      name: "path",
+      node,
+      value: path,
+    })
+
+    const slug = createFilePath({
       getNode,
       node,
     })
@@ -59,7 +69,7 @@ function onCreateNode({ node, actions, getNode }) {
     createNodeField({
       name: "slug",
       node,
-      value,
+      value: slug,
     })
   }
 }
