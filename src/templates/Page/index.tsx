@@ -1,7 +1,7 @@
 import { graphql, PageProps } from "gatsby"
 import React, { FC } from "react"
 import { repository } from "../../../package.json"
-import Layout from "../../components/layout"
+import Layout from "../../components/Layout"
 
 export interface DataType {
   markdownRemark: {
