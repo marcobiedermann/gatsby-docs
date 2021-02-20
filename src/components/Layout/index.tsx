@@ -6,6 +6,7 @@ import Footer from "../Footer"
 import Grid from "../Grid"
 import Header from "../Header"
 import Main from "../Main"
+import Navigation from "../Navigation"
 import styles from "./style.module.css"
 
 const Layout = ({ children }) => {
@@ -39,8 +40,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const routes = edges.map(edge => {
+    const {
+      node: {
+        fields: { slug },
+        frontmatter: { title },
+        id,
+      },
+    } = edge
+
+    return {
+      id,
+      path: `/docs${slug}`,
+      title,
+    }
+  })
+
   return (
-    <div class={styles.layout}>
+    <div className={styles.layout}>
       <Header>
         <Grid>
           <div>
@@ -52,25 +69,7 @@ const Layout = ({ children }) => {
         <Content>
           <Main>{children}</Main>
           <Aside direction="left">
-            <nav>
-              <ul>
-                {edges.map(edge => {
-                  const {
-                    node: {
-                      fields: { slug },
-                      frontmatter: { title },
-                      id,
-                    },
-                  } = edge
-
-                  return (
-                    <li key={id}>
-                      <Link to={`/docs${slug}`}>{title}</Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </nav>
+            <Navigation routes={routes} />
           </Aside>
         </Content>
       </Grid>
