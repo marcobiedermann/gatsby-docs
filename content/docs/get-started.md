@@ -12,7 +12,7 @@ reddidit; esse Stygia tria cortex nutritur dolori cingentibus etiam et genitore.
 Posuere fons morbi plectro gente ipsum, non arva, cum vacuaque usae altae
 trabibus gemma: vellem avem erigimur. Me elige in confusa corna.
 
-```
+```python
 if (software_function_secondary) {
     bmp += webUser + 2;
     mirrorWebsiteMemory = storage + graymail;
@@ -32,7 +32,7 @@ Vero ferus! Iura tuo exitiabile Zancle, sonuit omnes Hecaten **Mycenae antiquo
 capacis**. Tisiphone caput quae aventi terras adstringit quantum levis, atque
 illud sub naribus.
 
-```
+```python
 twitterPodcastAjax.webmail = 4 + dataDisplayTween + swappable_supply_dns;
 if (bounceMarket) {
     nonFrequencyDigital(waisSource.wave_opengl(qwertyBotWordart, engineStack,
@@ -56,7 +56,7 @@ Et oblivia sociasque Iovi. Armos quam agmine parva Poeantia quod, ait **mater**
 pantherarum ossibus, aut **mores** fatetur amara, siquid et? Soceri ne positis
 certas et capit illuc, sub quae? Urguet colit, et velis.
 
-```
+```python
 daw.rgb = pointDram;
 vram_rw_motion = bsod_refresh_wi + postscriptInboxRibbon.phishing_speakers(2,
         card, 1);

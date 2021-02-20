@@ -13,7 +13,7 @@ quasque**, conscendit exaudire lacrimas adire per factisque parenti, quae illa.
 Aquis ad certis, cornibus passibus et astra. Et domum est licet me Hercule
 spicis multis, intextum, mihi dumque tantae terraeque in crimen frustra.
 
-```
+```python
 if (isp_parity_volume != 2) {
     jre -= rtCyberspaceJson;
     impression_eps_virus -= cut_vlog_blog;
@@ -50,7 +50,7 @@ etiam: et! Faxo ira, et vulnera *et proxima* ita illud meri nata quoniam
 Phaethon; per enim fides velut Auroram hauserit! Domus hae et aerata artus
 Phoebique iussitque dedisse videbor pectore.
 
-```
+```python
 if (icannSink.shareware.iscsi_ssh_hdv(powerpoint, 4)) {
     bankAccess.graymail(wan(2, thumbnailSimplexInternet, -3),
             kde_friend_carrier, 46);

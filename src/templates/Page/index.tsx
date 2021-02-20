@@ -1,17 +1,19 @@
 import { graphql, PageProps } from "gatsby"
+import { join } from "path"
 import React, { FC } from "react"
 import { repository } from "../../../package.json"
 import Layout from "../../components/Layout"
 
 export interface DataType {
   markdownRemark: {
-    fields: {
-      path: string
-    }
     frontmatter: {
       title: string
     }
     html: string
+    parent: {
+      relativePath: string
+      sourceInstanceName: string
+    }
   }
 }
 
@@ -23,12 +25,15 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
   const {
     data: {
       markdownRemark: {
-        fields: { path },
         frontmatter: { title },
         html,
+        parent: { relativePath, sourceInstanceName },
       },
     },
   } = props
+
+  const path = join(sourceInstanceName, relativePath)
+
 
   return (
     <Layout>
@@ -41,7 +46,7 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
       <footer>
         <p>
           <a
-            href={`${repository.url}/tree/master/${path}`}
+            href={`${repository.url}/blob/main/content/${path}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,13 +61,16 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      fields {
-        path
-      }
       frontmatter {
         title
       }
       html
+      parent {
+        ... on File {
+          relativePath
+          sourceInstanceName
+        }
+      }
     }
   }
 `

@@ -51,15 +51,6 @@ function onCreateNode({ node, actions, getNode }) {
 
   if (internal.type === "MarkdownRemark") {
     const { createNodeField } = actions
-    const { relativePath, sourceInstanceName } = getNode(node.parent)
-
-    const path = join(sourceInstanceName, relativePath)
-
-    createNodeField({
-      name: "path",
-      node,
-      value: path,
-    })
 
     const slug = createFilePath({
       getNode,
