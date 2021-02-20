@@ -2,8 +2,6 @@
 title: Get Started
 ---
 
-# Hanc corpore
-
 ## Cura rerum aequoris opibus
 
 Lorem markdownum audito pulsat videtur Aegides, reus placet Achille si *mihi*

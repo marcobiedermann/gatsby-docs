@@ -2,8 +2,6 @@
 title: Overview
 ---
 
-# Aequore est
-
 ## Felices bella
 
 Lorem markdownum sinusque more semper; atque cui soluto

@@ -1,0 +1,9 @@
+.aside {
+  inline-size: 25%;
+  min-inline-size: 16em;
+}
+
+.aside--left {
+  margin-inline-end: 1.5%;
+  order: -1
+}
