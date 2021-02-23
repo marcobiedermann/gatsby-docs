@@ -10,9 +10,27 @@ async function createPages({ graphql, actions, reporter }) {
     {
       allMarkdownRemark {
         edges {
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+            id
+          }
           node {
             fields {
               slug
+            }
+            id
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
             id
           }
@@ -33,13 +51,17 @@ async function createPages({ graphql, actions, reporter }) {
 
   edges.forEach(edge => {
     const {
+      next,
       node: { fields, id },
+      previous,
     } = edge
 
     createPage({
       component: pageTemplate,
       context: {
         id,
+        next,
+        previous,
       },
       path: `/docs${fields.slug}`,
     })

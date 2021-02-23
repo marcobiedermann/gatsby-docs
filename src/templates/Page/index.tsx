@@ -3,6 +3,7 @@ import { join } from "path"
 import React, { FC } from "react"
 import { repository } from "../../../package.json"
 import Layout from "../../components/Layout"
+import Pagination from "../../components/Pagination"
 
 export interface DataType {
   markdownRemark: {
@@ -19,6 +20,22 @@ export interface DataType {
 
 interface PageContextType {
   id: string
+  next: {
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      title: string
+    }
+  } | null
+  previous: {
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      title: string
+    }
+  } | null
 }
 
 const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
@@ -30,13 +47,17 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
         parent: { relativePath, sourceInstanceName },
       },
     },
+    pageContext: {
+      next,
+      previous
+    }
   } = props
 
   const path = join(sourceInstanceName, relativePath)
 
-
   return (
     <Layout>
+      <section>
       <header>
         <h1>{title}</h1>
       </header>
@@ -54,6 +75,10 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = props => {
           </a>
         </p>
       </footer>
+      </section>
+      <section>
+        <Pagination next={next} previous={previous} />
+      </section>
     </Layout>
   )
 }

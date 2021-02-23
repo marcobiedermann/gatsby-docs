@@ -1,0 +1,16 @@
+.pagination {
+  display: grid;
+  gap: 1em;
+  list-style: none;
+  margin-block-end: 1.5em;
+  margin-block-start: 0.5em;
+  padding: 0;
+}
+
+.pagination__item--next {
+  justify-self: flex-end;
+}
+
+.pagination__item--previous {
+  justify-self: flex-start;
+}
