@@ -77,6 +77,7 @@ function onCreateNode({ node, actions, getNode }) {
     const slug = createFilePath({
       getNode,
       node,
+      trailingSlash: false,
     })
 
     createNodeField({
