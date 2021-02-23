@@ -23,7 +23,9 @@ const Navigation: FC<NavigationProps> = props => {
 
           return (
             <li key={id}>
-              <Link to={path}>{title}</Link>
+              <Link className={styles.navigation__link} to={path}>
+                {title}
+              </Link>
             </li>
           )
         })}
