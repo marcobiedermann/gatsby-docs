@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import capitalize from "lodash/capitalize"
 import React, { FC } from "react"
-import styles from "./style.module.css"
+import * as styles from "./style.module.css"
 
 type Direction = "left" | "right"
 

@@ -7,6 +7,8 @@
   padding: 0;
 }
 
+.pagination__item {}
+
 .pagination__item--next {
   justify-self: flex-end;
 }

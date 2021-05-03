@@ -1,8 +1,8 @@
 import React, { FC } from "react"
-import styles from "./style.module.css"
+import * as styles from "./style.module.css"
 
 const Content: FC = props => {
-  return <content className={styles.content} {...props} />
+  return <div className={styles.content} {...props} />
 }
 
 export default Content

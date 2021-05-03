@@ -4,7 +4,7 @@ title: Get Started
 
 ## Cura rerum aequoris opibus
 
-Lorem markdownum audito pulsat videtur Aegides, reus placet Achille si *mihi*
+Lorem markdownum audito pulsat videtur Aegides, reus placet Achille si _mihi_
 mactatae; infelix. Fuisti vi vulnera sibi calamis bona modo spatio. Serpens
 reddidit; esse Stygia tria cortex nutritur dolori cingentibus etiam et genitore.
 Posuere fons morbi plectro gente ipsum, non arva, cum vacuaque usae altae
@@ -73,8 +73,8 @@ if (fiber_leopard_regular(5, restore_file_iscsi, 3) > passive_public_igp +
 
 ## Qua venerat cum accipit saxa imagine
 
-Detegeret stimulis celerem *hi* dixit alter enim: cunctis emisit cur nobiliumque
-conamine ait sperabam, *sed* canes harundine quod. Saepe linguae habuere
+Detegeret stimulis celerem _hi_ dixit alter enim: cunctis emisit cur nobiliumque
+conamine ait sperabam, _sed_ canes harundine quod. Saepe linguae habuere
 sceptrum medium populisque secum, substricta vincla invito Areos.
 
 Robora **et incitat moenia**; et videndi in ursi percurrens partim? [Sinit cum

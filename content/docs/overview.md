@@ -6,7 +6,7 @@ title: Overview
 
 Lorem markdownum sinusque more semper; atque cui soluto
 [sevocat](http://www.demittit.net/locis.html) nobilis ventos; qui narres, atque,
-alii *vates*. Frondibus bene ipsumque! Illa tu gurgite **cornua imperiis
+alii _vates_. Frondibus bene ipsumque! Illa tu gurgite **cornua imperiis
 quasque**, conscendit exaudire lacrimas adire per factisque parenti, quae illa.
 Aquis ad certis, cornibus passibus et astra. Et domum est licet me Hercule
 spicis multis, intextum, mihi dumque tantae terraeque in crimen frustra.
@@ -43,8 +43,8 @@ Lente micantes ait talia, fruticumque quin auctor aquila, viam.
 ## Ipsa adpositis alveus marmoreas stagnum terribilesque placitas
 
 Sinu misi angues ad o ferum resilire omnibus Vulcani nusquam. Pace in vigor
-sonos felix. Esse filia lapis *inductum vixque* simplex frondator tenebris de
-etiam: et! Faxo ira, et vulnera *et proxima* ita illud meri nata quoniam
+sonos felix. Esse filia lapis _inductum vixque_ simplex frondator tenebris de
+etiam: et! Faxo ira, et vulnera _et proxima_ ita illud meri nata quoniam
 Phaethon; per enim fides velut Auroram hauserit! Domus hae et aerata artus
 Phoebique iussitque dedisse videbor pectore.
 
@@ -65,7 +65,7 @@ isdn = shell_mainframe_yottabyte;
 ## Ille conveniunt incola Belides finierat tenent loco
 
 Flammis et Pandioniae punica similem quotiens tantum. Sortita si Aurora
-**externo** omnesque ait cruentior tibia aevum mente *terga mendacibus*. In
+**externo** omnesque ait cruentior tibia aevum mente _terga mendacibus_. In
 aliter Phoeboque supplex caelum erroris et qui, ait data.
 
 ## Mariti quo congelat eodem
@@ -76,7 +76,7 @@ Puerile ad eruit horrendus sine relinquit saetis undas illa minus addidit
 trahens stabant donec; morsibus dabitur. Hectora sed patet in cervice contentus
 iussa vertice possedit offensa; et.
 
-Quibus *illis ille tot*. **Hos graves aras** palato Noemonaque fumant
+Quibus _illis ille tot_. **Hos graves aras** palato Noemonaque fumant
 requieverit bracchia abdidit destinat? Coeunt suos quae notum fata minor currus!
 Pia et quondam consiste, non fuit miserabile extrema quoque talia; non mei
 pectora domino. Curvamina sibila.

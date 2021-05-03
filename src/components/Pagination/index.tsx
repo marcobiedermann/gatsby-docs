@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import { Link } from "gatsby"
 import React, { FC } from "react"
-import styles from "./style.module.css"
+import * as styles from "./style.module.css"
 
 export interface PaginationProps {
   next?: {
@@ -24,8 +24,6 @@ export interface PaginationProps {
 
 const Pagination: FC<PaginationProps> = props => {
   const { next, previous } = props
-
-  console.log({ styles })
 
   return (
     <ul className={styles.pagination}>

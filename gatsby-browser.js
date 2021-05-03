@@ -11,4 +11,3 @@ import "@fontsource/roboto/latin-700-italic.css"
 import "@fontsource/roboto/latin-700.css"
 import "prism-theme-night-owl"
 import "./src/styles/main.css"
-
