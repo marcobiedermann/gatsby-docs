@@ -1,4 +1,7 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+import { resolve } from "path"
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: "Gatsby Docs Starter",
     description:
@@ -31,14 +34,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`,
+        path: resolve("src/images"),
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "docs",
-        path: `${__dirname}/content/docs`,
+        path: resolve("content/docs"),
       },
     },
     {
@@ -59,3 +62,5 @@ module.exports = {
     },
   ],
 }
+
+export default config
