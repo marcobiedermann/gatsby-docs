@@ -1,8 +1,47 @@
-const { createFilePath } = require("gatsby-source-filesystem")
+import type { GatsbyNode } from "gatsby"
+import { createFilePath } from "gatsby-source-filesystem"
+import { resolve } from "path"
 
-const pageTemplate = require.resolve("./src/templates/Page/index.tsx")
+const pageTemplate = resolve("src/templates/Page/index.tsx")
 
-async function createPages({ graphql, actions, reporter }) {
+interface Edge {
+  next: {
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      title: string
+    }
+    id: string
+  }
+  node: {
+    fields: {
+      slug: string
+    }
+    id: string
+  }
+  previous: {
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      title: string
+    }
+    id: string
+  }
+}
+
+interface Data {
+  allMarkdownRemark: {
+    edges: Edge[]
+  }
+}
+
+const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+  reporter,
+}) => {
   const { createPage } = actions
 
   const { data, errors } = await graphql(`
@@ -39,14 +78,14 @@ async function createPages({ graphql, actions, reporter }) {
   `)
 
   if (errors) {
-    reporter.panicBuild("There was an error loading your blog posts", errors)
+    reporter.panicOnBuild("There was an error loading your blog posts", errors)
 
     return
   }
 
   const {
     allMarkdownRemark: { edges },
-  } = data
+  } = data as Data
 
   edges.forEach(edge => {
     const {
@@ -87,7 +126,4 @@ function onCreateNode({ node, actions, getNode }) {
   }
 }
 
-module.exports = {
-  createPages,
-  onCreateNode,
-}
+export { createPages, onCreateNode }
